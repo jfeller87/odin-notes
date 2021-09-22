@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Sheet</title>
+</head>
+<body>
+    <h1>CSS Sheet</h1>
+    <div>
+        <h2>Basic CSS Syntax</h2>
+        <img src="../img/css-syntax.jpg" alt="Konzept der CSS Syntax">
+        <p>
+            Syntax-Konzept: Für einen Selektor werden property:value Paare definiert.
+        </p>
+        <h3>Selectoren</h3>
+        <ul>
+            <li><strong>Universal Selector</strong>: *</li>
+            <li><strong>Type Selectors</strong>: div, p, h1 usw...</li>
+            <li><strong>Class Selectors</strong>: .class-name (und dem HTML Element die entsprechende(n) Klasse(n) zuweisen. </li>
+            <li><strong>ID Selectors</strong>: #ID-Name (und der Klasse die entsprechende ID zuweisen)</li>
+            <li><em>Unterschied von ID und Class Selector: Jedes Element kann nur eine ID, aber mehrere Klassen haben</em></li>
+        </ul>
+        <h3>Selectoren Gruppieren</h3>
+        <img src="../img/grouping-selectors.jpg">
+        <p>Selectoren, die die gleichen Einstellungen bekommen sollen, können auch gruppiert werden, indem sie mit Komma getrennt aufgeführt werden</p>
+        <h3>Selectoren verketten</h3>
+        <img src="../img/chaining-selectors.jpg">
+        <p>Auf diese Weise werden alle HTML-Elemente angesprochen, die sowohl die Klasse <em>subsection</em> als auch die Klasse <em>header</em> haben</p>
+        <h3>Descendant Combinator</h3>
+        <img src="../img/descendant-combinator.jpg">
+        <p>Es gibt vier Typen von Kombinatoren, hier erstmal nur der <strong>descendant combinator</strong>. Dazu wird zwischen mehrere Selectoren ein Space gelassen. Ein Selector .ancestor .child steuert dann die Elemente an, die die Klasse .child haben und ein (Groß)Elternelement mit der Klasse .ancestor</p>
+    </div>
+    <div>
+        <h2>Properties</h2>
+        <ul>
+            <li><strong>color</strong> sets an element's text color</li>
+            <li><strong>background-color</strong> sets an element's background color</li>
+            <li><em>Both accept different kind of values: </em> <ul>
+                <li>keywords: red, green, transparent usw.</li>
+                <li>HEX: #ff0000</li>
+                <li>RGB: rgb(255,0,0)</li>
+                <li>HSL: hsl(0,100%,50%)</li>
+            </ul></li>
+            <li><strong>font-family</strong> single value or comma-separated list (if browser does not find first, will look for next in list). Option 1: name like "Times New Roman". Option 2: generic name like sans-serif</li>
+            <li><strong>font-size</strong> eg. 22px</li>
+            <li><strong>font-weight</strong> boldness of text, either keyword (e.g. bold) or number between 1-1000</li>
+            <li><strong>text-align</strong> align text within element: center, left, right</li>
+            <li><strong>height/width</strong> Image height/width, auto/500px/50%</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Cascade of Styles</h2>
+        <p>Cascade determines which rules actually get applied to HTML Elements.</p>
+        <ul>
+            <li><h3>Specificity</h3>
+                <p>A CSS declaration that is more specific will take precedence over ones that are less specific. When no declaration has a selector with a higher specificity, a larger amount of a single selector will beat a smaller amount of that same selector</p>
+                <ol>
+                    <li>ID selectors <em>(most specific selector)</em></li>
+                    <li>Class selectors</li>
+                    <li>Type selectors</li>
+                    <li>Universal selector and combinators <em>(no specificity)</em></li>
+                </ol>
+            </li>
+            <li><h3>Inheritance</h3>
+            <p>Typography based properties (color, font-size, font-family etc.) are usually inherited, most other properties aren't</p></li>
+            <li><h3>Rule Order</h3>
+            <p>If still tied between different rules, last decider: rule last defined is the winner</p></li>
+        </ul>
+    </div>
+    <div>
+        <h2>Adding CSS to HTML</h2>
+        <p>Three methods to add CSS to HTML</p>
+        <ul>
+            <li><h3>External CSS</h3>
+            <img src="../img/external-css.jpg">
+            <p>Most common. Create separate file for CSS and link inside of HTML's head. Keeps HTML smaller and make things look cleaner. Only need to edit CSS in one place.</p></li>
+            <li><h3>Internal CSS</h3>
+            <img src="../img/internal-css.jpg">
+            <p>Add CSS within the HTML file. Place all rules inside of style tags in the head of the HTML document. Useful for adding unique styles to a single page of a website.</p></li>
+            <li><h3>Inline CSS</h3>
+            <p>Add Styles directly to HTML elements, <strong>not recommended</strong>. Does not use style tags but style= attribute</p></li>
+        </ul>
+    </div>
+</body>
+</html>
