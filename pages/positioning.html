@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="de-DE">
+        <link rel="stylesheet" href="">
+        <title>Positioning on Websites</title>
+    </head>
+    <body>
+        <h1>Positioning by Boxmodel, Inline vs. Block, Flexboxes</h1>
+        <h2>The Box Model</h2>
+        <p>Everything on a webpage is a rectangle. Boxes, nested in other boxes.</p>
+        <img src="../img/box-model.jpg" alt="Bild des Box-Models">
+        <ul>
+            <li><strong>Padding</strong> Increases the space between the edge of a box and the content inside of it</li>
+            <li><strong>Margin</strong> Increases the space between a box and any others that sit next to it.</li>
+            <li>
+                <strong>Border</strong> adds space between the margin and the padding.
+                <ul>
+                    <li><strong>border-with</strong> sets width of the border</li> 
+                    <li><strong>border-style</strong> sets style</li>
+                    <li><strong>border-color</strong> sets color of the border</li>
+                    <li>also possible: border-top-width usw...</li>
+                    <li>also possible: border-top: set values for all properties at once, eg. <em>border-top: 5px dotted green;</em> </li>
+                </ul>
+            </li>
+        </ul>
+        <p>In the standard box model, if you give a box a width and height attribute, this defines the width and height of the content box.
+            Any padding and border is then added to that width and height to get the total size taken up by the box.
+            <em> The margin is not counted towards the actual size of the box!</em></p>
+        <h3>The alternative CSS box model</h3>
+        <p>To turn on the alternative CSS box model for an element, set <em> box-sizing: border-box</em> on it.
+            Using this model, any width is the width of the visible box on the page, therefore the content area width is that width minus
+            the width for the padding and border. The size of borders will make the content-box smaller.
+        If you want all elements to use the alternative box model, set box-sizing property on the html Element, then set all other elements to inherit it like shown below:</p>
+        <img src="../img/invoke-alternative-box-model.jpg" alt="Code snippet of activating alternative Box model">
+        <p><em>Using the alternative Box Model is a common choice among developers</em></p>
+        <h3>Margin collapsing</h3>
+        <p>If two elements whose margins touch have both positive margins, the margin between will be the largest individual margin. If one margin is negative, its value will be subtracted from the total. Where both are negative, the margins will collapse and the smallest (furthest from zero) value will be used.</p>
+        <h2>Block vs Inline</h2>
+        <p>It is possible to change how a box is calculated by changing the <em>display</em> property</p>
+        <ul>
+            <li><strong>display: block;</strong> Block elements appear on the page stacked atop each other, each new element starting on a new line.</li>
+            <li><strong>display: inline;</strong> Inline elements do not start on a new line. A example of an inline element is a link, or "<a>" tag. The size of an inline element is just the size of its content. you can't set width or height on inline elements.</li>
+            <li><strong>display: inline-block</strong> Inline-block elements behave like inline elements, but with block-style padding and margin.</li>
+        </ul>
+    </body>
+</html>
